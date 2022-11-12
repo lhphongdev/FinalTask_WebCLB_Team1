@@ -7,16 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-size: cover;
-  background-position: center;
-}
 header {
   position: relative;
   top: 0;
@@ -27,6 +17,7 @@ header {
   align-items: center;
   background-color: #1E90FF;
 }
+
 header .logo {
   margin-left: -55px;
   color: #fff;
@@ -36,6 +27,7 @@ header .logo {
   font-weight: 800;
   letter-spacing: 1px;
 }
+
 header .navigation a {
   color: #fff;
   text-decoration: none;
@@ -46,13 +38,16 @@ header .navigation a {
   transition: 0.3s;
   transition-property: background;
 }
+
 header .navigation a:not(:last-child) {
   margin-right: 20px;
 }
+
 header .navigation a:hover {
   background: #fff;
   color: #1E90FF;
 }
+
 label {
   display: none;
 }
@@ -61,11 +56,13 @@ label {
   z-index: 3;
   display: none;
 }
+
 /* Responsive Styles */
 @media (max-width: 960px) {
   header .navigation {
     display: none;
   }
+
   label {
     display: block;
     font-size: 25px;
@@ -73,13 +70,16 @@ label {
     transition: 0.3s;
     transition-property: color;
   }
+
   label:hover {
     color: #fff;
   }
+
   label .close-btn {
     display: none;
   }
-  #check:checked ~ header .navigation {
+
+  #check:checked~header .navigation {
     z-index: 2;
     position: fixed;
     background: rgba(114, 223, 255, 0.9);
@@ -92,26 +92,47 @@ label {
     justify-content: center;
     align-items: center;
   }
-  #check:checked ~ header .navigation a {
+
+  #check:checked~header .navigation a {
     font-weight: 700;
     margin-right: 0;
     margin-bottom: 50px;
     letter-spacing: 2px;
   }
-  #check:checked ~ header label .menu-btn {
+
+  #check:checked~header label .menu-btn {
     display: none;
   }
 
-  #check:checked ~ header label .close-btn {
+  #check:checked~header label .close-btn {
     z-index: 2;
     display: block;
     position: fixed;
   }
+
   label .menu-btn {
     position: absolute;
   }
+
   header .logo {
     position: absolute;
     bottom: -6px;
   }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 8px #0f9d58;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0f9d58;
 }
